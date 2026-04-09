@@ -13,7 +13,10 @@ const Paradigm = dynamic(() => import('@/components/sections/Paradigm'), { ssr: 
 import Timeline from '@/components/sections/Timeline';
 import Assets from '@/components/sections/Assets';
 const Data = dynamic(() => import('@/components/sections/Data'), { ssr: false });
-const AssetEvaluator = dynamic(() => import('@/components/sections/AssetEvaluator'), { ssr: false });
+const AssetEvaluator = dynamic(() => import('@/components/sections/AssetEvaluator'), { 
+  ssr: false,
+  loading: () => <div className="min-h-[500px] flex items-center justify-center bg-[#0a0a14] text-white/20">加载身价评估中心...</div>
+});
 import Psychology from '@/components/sections/Psychology';
 const Legal = dynamic(() => import('@/components/sections/Legal'), { ssr: false });
 import Sources from '@/components/sections/Sources';

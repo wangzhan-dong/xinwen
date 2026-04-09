@@ -38,12 +38,14 @@ export default function AssetEvaluator() {
     const timer = setTimeout(() => {
       let total = 0;
       GAMES.forEach(game => {
-        total += (gameValues[game.id] || 0) * game.rate;
+        const val = gameValues[game.id] || 0;
+        if (!isNaN(val)) total += val * game.rate;
       });
       SOCIALS.forEach(platform => {
-        total += (socialValues[platform.id] || 0) * platform.val;
+        const val = socialValues[platform.id] || 0;
+        if (!isNaN(val)) total += val * platform.val;
       });
-      setCyberWorth(Math.floor(total));
+      setCyberWorth(Math.floor(isNaN(total) ? 0 : total));
       setIsCalculating(false);
     }, 300);
     return () => clearTimeout(timer);
