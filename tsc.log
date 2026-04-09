@@ -1,0 +1,3 @@
+﻿src/components/canvas/DigitalUniverse.tsx(5,25): error TS7016: Could not find a declaration file for module 'maath/random/dist/maath-random.esm'. 'D:/zhuomian/agent/virtual-assets-site/node_modules/maath/random/dist/maath-random.esm.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/maath` if it exists or add a new declaration (.d.ts) file containing `declare module 'maath/random/dist/maath-random.esm';`
+src/components/ui/AudioPlayer.tsx(4,34): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.

@@ -1,0 +1,107 @@
+﻿
+> virtual-assets-next@0.1.0 build
+> next build
+
+  鈻?Next.js 14.2.35
+
+   Creating an optimized production build ...
+ 鉁?Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+node.exe : TypeError: Cannot read pr
+operties of undefined (reading 'S')
+所在位置 行:1 字符: 1
++ & "C:\Program Files\nodejs/node.ex
+e" "C:\Program Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSp 
+   ecified: (TypeError: Cann...d (  
+  reading 'S'):String) [], Remote   
+ Exception
+    + FullyQualifiedErrorId : Nativ 
+   eCommandError
+ 
+    at fE.exports.fA.exports (D:\zhu
+omian\agent\virtual-assets-site\.nex
+t\server\app\page.js:389:97864)
+    at D:\zhuomian\agent\virtual-ass
+ets-site\.next\server\app\page.js:39
+3:3913
+    at 3943 (D:\zhuomian\agent\virtu
+al-assets-site\.next\server\app\page
+.js:393:3951)
+    at Object.t [as require] (D:\zhu
+omian\agent\virtual-assets-site\.nex
+t\server\webpack-runtime.js:1:127)
+    at require (D:\zhuomian\agent\vi
+rtual-assets-site\node_modules\next\
+dist\compiled\next-server\app-page.r
+untime.prod.js:17:18811)
+    at s (D:\zhuomian\agent\virtual-
+assets-site\node_modules\next\dist\c
+ompiled\next-server\app-page.runtime
+.prod.js:12:88330)
+    at D:\zhuomian\agent\virtual-ass
+ets-site\node_modules\next\dist\comp
+iled\next-server\app-page.runtime.pr
+od.js:12:98875
+    at D:\zhuomian\agent\virtual-ass
+ets-site\node_modules\next\dist\comp
+iled\next-server\app-page.runtime.pr
+od.js:12:98962
+    at t (D:\zhuomian\agent\virtual-
+assets-site\node_modules\next\dist\c
+ompiled\next-server\app-page.runtime
+.prod.js:12:99165) {
+  digest: '3567138327'
+}
+
+Error occurred prerendering page "/"
+. Read more: https://nextjs.org/docs
+/messages/prerender-error
+
+TypeError: Cannot read properties of
+ undefined (reading 'S')
+    at fE.exports.fA.exports (D:\zhu
+omian\agent\virtual-assets-site\.nex
+t\server\app\page.js:389:97864)
+    at D:\zhuomian\agent\virtual-ass
+ets-site\.next\server\app\page.js:39
+3:3913
+    at 3943 (D:\zhuomian\agent\virtu
+al-assets-site\.next\server\app\page
+.js:393:3951)
+    at Object.t [as require] (D:\zhu
+omian\agent\virtual-assets-site\.nex
+t\server\webpack-runtime.js:1:127)
+    at require (D:\zhuomian\agent\vi
+rtual-assets-site\node_modules\next\
+dist\compiled\next-server\app-page.r
+untime.prod.js:17:18811)
+    at s (D:\zhuomian\agent\virtual-
+assets-site\node_modules\next\dist\c
+ompiled\next-server\app-page.runtime
+.prod.js:12:88330)
+    at D:\zhuomian\agent\virtual-ass
+ets-site\node_modules\next\dist\comp
+iled\next-server\app-page.runtime.pr
+od.js:12:98875
+    at D:\zhuomian\agent\virtual-ass
+ets-site\node_modules\next\dist\comp
+iled\next-server\app-page.runtime.pr
+od.js:12:98962
+    at t (D:\zhuomian\agent\virtual-
+assets-site\node_modules\next\dist\c
+ompiled\next-server\app-page.runtime
+.prod.js:12:99165)
+ 鉁?Generating static pages (5/5)
+
+> Export encountered errors on follo
+wing paths:
+	/page: /

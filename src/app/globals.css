@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #05050A;
+  --foreground: #ffffff;
+  
+  --primary: #0ea5e9;
+  --secondary: #6366f1;
+  --legal-red: #ef4444;
+  --accent-amber: #f59e0b;
+
+  --color-blue: #00F0FF;
+  --color-purple: #B026FF;
+  --color-cyan: #00FF9D;
+  --gradient-main: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+
+  --glass-bg: rgba(20, 20, 35, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  overflow-x: hidden;
+  /* Next.js with GSAP ScrollTrigger works better without smooth scrolling via CSS */
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.custom-cursor.hover {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark-glass-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--gradient-main);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #05050A; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Progress bar */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-blue), var(--color-purple));
+  z-index: 1000;
+  width: 0%;
+}
+
+.game-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.game-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-blue);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Water Tank */
+.water-tank {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #1e293b;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.5);
+}
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #0ea5e9 0%, #312e81 100%);
+  transition: height 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.water-wave {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 200%;
+  height: 30px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 40%;
+  animation: wave 4s infinite linear;
+}
+@keyframes wave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Gavel Animations */
+.gavel-hit {
+  animation: slam 0.6s ease-out forwards;
+}
+@keyframes slam {
+  0% { transform: rotate(-45deg); opacity: 0; }
+  50% { transform: rotate(0deg); opacity: 1; }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); opacity: 1; }
+}
