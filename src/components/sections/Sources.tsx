@@ -45,26 +45,9 @@ export default function Sources() {
         </div>
       </section>
 
-      {/* Footer XML */}
-      <section className="py-12 px-6 bg-black border-t border-white/5 z-10 relative">
-        <div className="max-w-4xl mx-auto bg-white/5 p-6 rounded-3xl font-mono text-[10px] text-sky-400 overflow-x-auto shadow-2xl border border-white/10">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-white font-bold opacity-80">PROMPT_MERGE_PROTOCOL</span>
-            <span className="px-2 py-0.5 bg-green-600/50 text-white rounded">V4.0 ULTIMATE</span>
-          </div>
-          <pre className="text-sky-400 opacity-80 whitespace-pre-wrap">
-            {`<Integrate>
-  <H5_Interactives>Enabled (Scroll, WaterTank, Canvas, Gavel)</H5_Interactives>
-  <Research_Data>Injected (Z-Gen 22.4%, Alpha 86%, HOK, CS2 $1M)</Research_Data>
-  <Verdict>Fully compliant with requested logic flow and high-fidelity aesthetics.</Verdict>
-</Integrate>`}
-          </pre>
-        </div>
-      </section>
-
-      <footer className="bg-[#05050A] py-16 text-center text-slate-600 text-sm z-10 relative">
-        <p className="tracking-widest uppercase mb-4 text-white/30">全景视界 2026 融合新闻实验室</p>
-        <p className="mt-4 text-xs italic opacity-50">&copy; 2026 权威新闻与数据服务中心. All rights reserved.</p>
+      <footer className="bg-[#05050A] py-16 text-center text-slate-500 text-sm z-10 relative">
+        <p className="tracking-widest uppercase mb-4 text-white/30 font-bold">全景视界 2026 融合新闻实验室</p>
+        <p className="mt-4 text-xs opacity-70">成都大学25级文学与新闻传播学院广播电视学一班 融合新闻一组</p>
       </footer>
     </>
   );
