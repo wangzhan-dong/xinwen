@@ -15,10 +15,10 @@ const GAMES = [
 ];
 
 const SOCIALS = [
-  { id: "bilibili", name: "B站", icon: "📺", val: 5.5 },
-  { id: "douyin", name: "抖音", icon: "🎵", val: 3.2 },
-  { id: "kuaishou", name: "快手", icon: "🧡", val: 2.8 },
-  { id: "xhs", name: "小红书", icon: "📕", val: 8.5 },
+  { id: "bilibili", name: "B站", icon: "📺", val: 0.45 },
+  { id: "douyin", name: "抖音", icon: "🎵", val: 0.25 },
+  { id: "kuaishou", name: "快手", icon: "🧡", val: 0.18 },
+  { id: "xhs", name: "小红书", icon: "📕", val: 0.65 },
 ];
 
 export default function AssetEvaluator() {
@@ -26,22 +26,32 @@ export default function AssetEvaluator() {
   const [socialValues, setSocialValues] = useState<Record<string, number>>({});
   const [cyberWorth, setCyberWorth] = useState(0);
   const [isCalculating, setIsCalculating] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     setIsCalculating(true);
     const timer = setTimeout(() => {
       let total = 0;
       GAMES.forEach(game => {
-        total += (gameValues[game.id] || 0) * game.rate;
+        const val = gameValues[game.id] || 0;
+        if (!isNaN(val)) total += val * game.rate;
       });
       SOCIALS.forEach(platform => {
-        total += (socialValues[platform.id] || 0) * platform.val;
+        const val = socialValues[platform.id] || 0;
+        if (!isNaN(val)) total += val * platform.val;
       });
-      setCyberWorth(Math.floor(total));
+      setCyberWorth(Math.floor(isNaN(total) ? 0 : total));
       setIsCalculating(false);
     }, 300);
     return () => clearTimeout(timer);
-  }, [gameValues, socialValues]);
+  }, [gameValues, socialValues, mounted]);
+
+  if (!mounted) return null;
 
   return (
     <section id="evaluator" className="scroll-section py-24 bg-[#0a0a14] px-6 relative z-10">
