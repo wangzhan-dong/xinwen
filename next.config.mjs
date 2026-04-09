@@ -1,11 +1,12 @@
-/** @type {import('next').NextImage} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // Ensure that dynamic parts are handled correctly in static export
+  // Maintain production stability for static hosting
   trailingSlash: true,
+  reactStrictMode: true,
 };
 
 export default nextConfig;
