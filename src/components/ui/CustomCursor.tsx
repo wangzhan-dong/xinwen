@@ -7,8 +7,10 @@ export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       if (!isVisible) setIsVisible(true);
@@ -37,7 +39,8 @@ export default function CustomCursor() {
     };
   }, [isVisible]);
 
-  // Fallback for mobile/touch devices
+  // Ensure zero rendering on server and handle mobile/touch fallback
+  if (!mounted) return null;
   if (typeof window !== "undefined" && window.matchMedia("(hover: none)").matches) {
     return null;
   }

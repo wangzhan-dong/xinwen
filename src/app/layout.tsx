@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/ui/CustomCursor";
-import AudioPlayer from "@/components/ui/AudioPlayer";
+import dynamic from "next/dynamic";
+
+// Force client-only loading to prevent hydration crashes on mobile browsers
+const CustomCursor = dynamic(() => import("@/components/ui/CustomCursor"), { ssr: false });
+const AudioPlayer = dynamic(() => import("@/components/ui/AudioPlayer"), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "数字资产进化论 2026",
+  title: "虚拟资产发展全景观察",
   description: "全景视界 2026 融合新闻实验室深度报道",
 };
 

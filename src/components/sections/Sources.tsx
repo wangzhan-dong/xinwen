@@ -31,7 +31,7 @@ export default function Sources() {
               <h4 className="font-bold text-amber-400 mb-3 text-lg">💰 垂直交易与用户属性</h4>
               <ul className="space-y-3 text-sm text-slate-300 list-disc list-inside">
                 <li><strong className="text-white">闲鱼 / 交易猫：</strong> 1.6亿 ACG 受众用户盘，218元月均单次花费数据。</li>
-                <li><strong className="text-white">Newzoo：</strong> 2028 年游戏群体39亿，以及 Alpha一代零花钱 53% 线上流通定调。</li>
+                <li><strong className="text-white">Newzoo：</strong> 2026 年游戏群体预计达 37 亿，以及 Alpha一代零花钱 53% 线上流通定调。</li>
               </ul>
             </div>
             
