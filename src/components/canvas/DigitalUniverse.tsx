@@ -9,8 +9,15 @@ import * as THREE from 'three';
 export default function DigitalUniverse() {
   const ref = useRef<THREE.Points>(null);
   
-  // maath-random returns Float32Array
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.5 }) as Float32Array);
+  // Use a multiple of 3 for positions to avoid NaN issues with stride 3
+  const [sphere] = useState(() => {
+    const data = random.inSphere(new Float32Array(6000), { radius: 1.5 }) as Float32Array;
+    // Safety check: ensure no NaNs are present in the generated array
+    for (let i = 0; i < data.length; i++) {
+      if (isNaN(data[i])) data[i] = 0;
+    }
+    return data;
+  });
   
   useFrame((state, delta) => {
     if (ref.current) {
