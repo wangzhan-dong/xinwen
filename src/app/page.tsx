@@ -60,7 +60,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2 pointer-events-auto">
             <div className="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center text-white font-bold italic shadow-lg">N</div>
-            <span className="font-bold text-xl tracking-tighter text-white">权威媒体：全景视界 2026</span>
+            <span className="font-bold text-xl tracking-tighter text-white">虚拟资产发展全景观察</span>
           </div>
           <div className="hidden lg:flex space-x-8 text-sm font-bold text-slate-400 pointer-events-auto">
             <a href="#hero" className="hover:text-sky-400 transition">起势</a>
