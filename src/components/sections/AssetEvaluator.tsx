@@ -15,10 +15,10 @@ const GAMES = [
 ];
 
 const SOCIALS = [
-  { id: "bilibili", name: "B站", icon: "📺", val: 5.5 },
-  { id: "douyin", name: "抖音", icon: "🎵", val: 3.2 },
-  { id: "kuaishou", name: "快手", icon: "🧡", val: 2.8 },
-  { id: "xhs", name: "小红书", icon: "📕", val: 8.5 },
+  { id: "bilibili", name: "B站", icon: "📺", val: 0.45 },
+  { id: "douyin", name: "抖音", icon: "🎵", val: 0.25 },
+  { id: "kuaishou", name: "快手", icon: "🧡", val: 0.18 },
+  { id: "xhs", name: "小红书", icon: "📕", val: 0.65 },
 ];
 
 export default function AssetEvaluator() {

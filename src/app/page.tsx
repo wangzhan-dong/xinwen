@@ -13,6 +13,7 @@ const Paradigm = dynamic(() => import('@/components/sections/Paradigm'), { ssr: 
 import Timeline from '@/components/sections/Timeline';
 import Assets from '@/components/sections/Assets';
 const Data = dynamic(() => import('@/components/sections/Data'), { ssr: false });
+import DataDeepDive from '@/components/sections/DataDeepDive';
 const AssetEvaluator = dynamic(() => import('@/components/sections/AssetEvaluator'), { 
   ssr: false,
   loading: () => <div className="min-h-[500px] flex items-center justify-center bg-[#0a0a14] text-white/20">加载身价评估中心...</div>
@@ -70,8 +71,8 @@ export default function Home() {
             <a href="#hero" className="hover:text-sky-400 transition">起势</a>
             <a href="#evolution" className="hover:text-sky-400 transition">时代演进</a>
             <a href="#assets" className="hover:text-sky-400 transition">核心锚点</a>
+            <a href="#deepdive" className="hover:text-sky-400 transition font-bold text-sky-500">📊 数据深潜</a>
             <a href="#evaluator" className="hover:text-sky-400 transition px-2 py-1 bg-white/5 rounded-lg border border-white/10">✨ 身价值</a>
-            <a href="#psychology" className="hover:text-sky-400 transition">洞察</a>
             <a href="#legal" className="hover:text-sky-400 transition">合规</a>
           </div>
           <button onClick={() => document.getElementById('sources')?.scrollIntoView()} className="pointer-events-auto bg-white/10 text-white px-3 lg:px-5 py-2 rounded-full text-[10px] lg:text-xs font-bold hover:bg-sky-600 border border-white/20 transition shadow-md whitespace-nowrap">
@@ -87,6 +88,7 @@ export default function Home() {
         <Timeline />
         <Assets />
         <Data />
+        <DataDeepDive />
         <AssetEvaluator />
         <Psychology />
         <Legal />
