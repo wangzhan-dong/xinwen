@@ -14,9 +14,21 @@ import Timeline from '@/components/sections/Timeline';
 import Assets from '@/components/sections/Assets';
 const Data = dynamic(() => import('@/components/sections/Data'), { ssr: false });
 import DataDeepDive from '@/components/sections/DataDeepDive';
+const SourceDataViz = dynamic(() => import('@/components/sections/SourceDataViz'), { 
+  ssr: false,
+  loading: () => <div className="min-h-[500px] flex items-center justify-center bg-[#06061a] text-white/20">加载信源数据...</div>
+});
 const AssetEvaluator = dynamic(() => import('@/components/sections/AssetEvaluator'), { 
   ssr: false,
   loading: () => <div className="min-h-[500px] flex items-center justify-center bg-[#0a0a14] text-white/20">加载身价评估中心...</div>
+});
+const InteractiveQuiz = dynamic(() => import('@/components/sections/InteractiveQuiz'), {
+  ssr: false,
+  loading: () => <div className="min-h-[400px] flex items-center justify-center bg-[#08081a] text-white/20">加载知识挑战...</div>
+});
+const LivePoll = dynamic(() => import('@/components/sections/LivePoll'), {
+  ssr: false,
+  loading: () => <div className="min-h-[400px] flex items-center justify-center bg-[#0a0a18] text-white/20">加载实时民调...</div>
 });
 import Psychology from '@/components/sections/Psychology';
 const Legal = dynamic(() => import('@/components/sections/Legal'), { ssr: false });
@@ -67,12 +79,15 @@ export default function Home() {
             <div className="w-8 h-8 lg:w-10 lg:h-10 bg-sky-600 rounded-xl flex items-center justify-center text-white font-bold italic shadow-lg">N</div>
             <span className="font-bold text-base lg:text-xl tracking-tighter text-white">虚拟资产发展全景观察</span>
           </div>
-          <div className="hidden lg:flex space-x-6 text-slate-400 pointer-events-auto font-medium">
+          <div className="hidden lg:flex space-x-4 text-slate-400 pointer-events-auto font-medium">
             <a href="#hero" className="hover:text-sky-400 transition">起势</a>
             <a href="#evolution" className="hover:text-sky-400 transition">时代演进</a>
             <a href="#assets" className="hover:text-sky-400 transition">核心锚点</a>
             <a href="#deepdive" className="hover:text-sky-400 transition font-bold text-sky-500">📊 数据深潜</a>
-            <a href="#evaluator" className="hover:text-sky-400 transition px-2 py-1 bg-white/5 rounded-lg border border-white/10">✨ 身价值</a>
+            <a href="#sourcedata" className="hover:text-amber-400 transition font-bold text-amber-400">📋 信源数据</a>
+            <a href="#evaluator" className="hover:text-sky-400 transition px-2 py-1 bg-white/5 rounded-lg border border-white/10">✨ 身价</a>
+            <a href="#quiz" className="hover:text-emerald-400 transition px-2 py-1 bg-white/5 rounded-lg border border-white/10">🧠 挑战</a>
+            <a href="#poll" className="hover:text-rose-400 transition">🗳️ 投票</a>
             <a href="#legal" className="hover:text-sky-400 transition">合规</a>
           </div>
           <button onClick={() => document.getElementById('sources')?.scrollIntoView()} className="pointer-events-auto bg-white/10 text-white px-3 lg:px-5 py-2 rounded-full text-[10px] lg:text-xs font-bold hover:bg-sky-600 border border-white/20 transition shadow-md whitespace-nowrap">
@@ -89,7 +104,10 @@ export default function Home() {
         <Assets />
         <Data />
         <DataDeepDive />
+        <SourceDataViz />
         <AssetEvaluator />
+        <InteractiveQuiz />
+        <LivePoll />
         <Psychology />
         <Legal />
         <Sources />
