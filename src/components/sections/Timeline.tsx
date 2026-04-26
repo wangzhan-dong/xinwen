@@ -15,18 +15,18 @@ export default function Timeline() {
   const activeContent = eraContent.find(c => c.id === activeEra)!;
 
   return (
-    <section id="evolution" className="scroll-section py-24 px-6 max-w-7xl mx-auto z-10 relative">
+    <section id="evolution" className="scroll-section py-12 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto z-10 relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="content-box">
-          <h2 className="text-4xl font-black mb-10 text-white">时代更迭：虚拟资产的三段进化</h2>
+          <h2 className="text-2xl sm:text-4xl font-black mb-6 sm:mb-10 text-white">时代更迭：虚拟资产的三段进化</h2>
           <div className="space-y-6">
             {eraContent.map((era) => (
               <div 
                 key={era.id}
                 onClick={() => setActiveEra(era.id)}
-                className={`p-6 border-l-4 rounded-r-2xl cursor-pointer transition-all ${activeEra === era.id ? 'bg-white/10 border-sky-500 shadow-md' : 'bg-white/5 border-white/20 hover:bg-white/10'}`}
+                className={`p-4 sm:p-6 border-l-4 rounded-r-2xl cursor-pointer transition-all ${activeEra === era.id ? 'bg-white/10 border-sky-500 shadow-md' : 'bg-white/5 border-white/20 hover:bg-white/10'}`}
               >
-                <h4 className={`font-bold text-xl mb-2 ${activeEra === era.id ? 'text-sky-400' : 'text-slate-200'}`}>
+                <h4 className={`font-bold text-base sm:text-xl mb-1.5 sm:mb-2 ${activeEra === era.id ? 'text-sky-400' : 'text-slate-200'}`}>
                   {era.title}
                 </h4>
                 <p className="text-sm text-slate-400 leading-relaxed">
@@ -38,7 +38,7 @@ export default function Timeline() {
         </div>
         
         <div className="content-box">
-          <div className="dark-glass-card text-white p-12 rounded-[3rem] shadow-2xl relative min-h-[400px] flex flex-col justify-center overflow-hidden border border-white/10">
+          <div className="dark-glass-card text-white p-6 sm:p-12 rounded-[1.5rem] sm:rounded-[3rem] shadow-2xl relative min-h-[280px] sm:min-h-[400px] flex flex-col justify-center overflow-hidden border border-white/10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeEra}
@@ -48,12 +48,12 @@ export default function Timeline() {
                 transition={{ duration: 0.3 }}
                 className="relative z-10"
               >
-                <div className="text-7xl mb-6 opacity-80">{activeContent.icon}</div>
-                <h3 className="text-3xl font-bold mb-6 text-sky-400">{activeContent.mainTitle}</h3>
-                <p className="text-slate-300 text-lg leading-relaxed">{activeContent.detail}</p>
+                <div className="text-4xl sm:text-7xl mb-4 sm:mb-6 opacity-80">{activeContent.icon}</div>
+                <h3 className="text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-sky-400">{activeContent.mainTitle}</h3>
+                <p className="text-slate-300 text-sm sm:text-lg leading-relaxed">{activeContent.detail}</p>
               </motion.div>
             </AnimatePresence>
-            <div className="absolute -bottom-10 -right-10 text-[200px] text-white/5 font-black italic select-none">
+            <div className="absolute -bottom-10 -right-10 text-[100px] sm:text-[200px] text-white/5 font-black italic select-none">
               {activeContent.v}
             </div>
           </div>

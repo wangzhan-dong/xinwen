@@ -42,17 +42,17 @@ export default function Paradigm() {
   };
 
   return (
-    <section id="paradigm" className="scroll-section py-24 px-6 max-w-7xl mx-auto border-b border-white/10 z-10 relative">
-      <div className="text-center mb-16 content-box">
-        <h2 className="text-4xl font-black text-white mb-4">从物质持有向数字资产的结构性迁移</h2>
-        <p className="text-slate-400 max-w-2xl mx-auto">
+    <section id="paradigm" className="scroll-section py-12 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-b border-white/10 z-10 relative">
+      <div className="text-center mb-10 sm:mb-16 content-box">
+        <h2 className="text-2xl sm:text-4xl font-black text-white mb-3 sm:mb-4">从物质持有向数字资产的结构性迁移</h2>
+        <p className="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
           数字在线支出已占全球家庭总预算 2.7%，在年轻人中更是占据着极大的分量。这并非通货膨胀，而是资产配置重心的位移。
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-        <motion.div className="glass-card p-8 rounded-[2rem] content-box shadow-sm">
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+        <motion.div className="glass-card p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] content-box shadow-sm">
+          <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center">
             <span className="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center mr-3 text-sm">Z</span>
             Z世代的激进投资逻辑
           </h3>
@@ -74,8 +74,8 @@ export default function Paradigm() {
           </div>
         </motion.div>
 
-        <motion.div className="glass-card p-8 rounded-[2rem] content-box shadow-sm">
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+        <motion.div className="glass-card p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] content-box shadow-sm">
+          <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center">
             <span className="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mr-3 text-sm">A</span>
             Alpha世代的“游戏即钱包”
           </h3>

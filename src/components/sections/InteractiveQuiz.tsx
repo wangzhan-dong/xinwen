@@ -80,7 +80,7 @@ export default function InteractiveQuiz() {
   const progress = ((currentQ + (selected !== null ? 1 : 0)) / QUIZ_DATA.length) * 100;
 
   return (
-    <section id="quiz" className="scroll-section py-24 bg-[#08081a] px-6 relative z-10">
+    <section id="quiz" className="scroll-section py-12 sm:py-24 bg-[#08081a] px-4 sm:px-6 relative z-10">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <motion.span
@@ -93,7 +93,7 @@ export default function InteractiveQuiz() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-black mb-4 text-white"
+            className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 text-white"
           >
             你对<span className="text-emerald-400">虚拟资产</span>了解多少？
           </motion.h2>
@@ -116,7 +116,7 @@ export default function InteractiveQuiz() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -30 }}
-              className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 backdrop-blur-xl"
+              className="bg-white/5 border border-white/10 rounded-[1.5rem] sm:rounded-[2.5rem] p-5 sm:p-10 backdrop-blur-xl"
             >
               <div className="flex justify-between items-center mb-8">
                 <span className="text-xs font-mono text-slate-500">
@@ -127,7 +127,7 @@ export default function InteractiveQuiz() {
                 </span>
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-8 leading-relaxed">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-6 sm:mb-8 leading-relaxed">
                 {q.q}
               </h3>
 
@@ -195,15 +195,15 @@ export default function InteractiveQuiz() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-gradient-to-br from-emerald-500/10 to-sky-500/10 border border-white/20 rounded-[3rem] p-12 text-center backdrop-blur-xl"
+              className="bg-gradient-to-br from-emerald-500/10 to-sky-500/10 border border-white/20 rounded-[1.5rem] sm:rounded-[3rem] p-6 sm:p-12 text-center backdrop-blur-xl"
             >
               <div className="text-7xl mb-6">
                 {score >= 5 ? '🏆' : score >= 3 ? '🎯' : '📚'}
               </div>
-              <h3 className="text-3xl font-black text-white mb-4">
+              <h3 className="text-2xl sm:text-3xl font-black text-white mb-4">
                 {score >= 5 ? '虚拟资产专家！' : score >= 3 ? '了解不少！' : '继续学习！'}
               </h3>
-              <div className="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 mb-4">
+              <div className="text-4xl sm:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 mb-4">
                 {score} / {QUIZ_DATA.length}
               </div>
               <p className="text-slate-400 mb-8 max-w-md mx-auto">
@@ -213,7 +213,7 @@ export default function InteractiveQuiz() {
                   ? '你有一定的认知基础，继续浏览报告了解更多细节。'
                   : '建议仔细阅读我们的深度报告，那些关键数据值得关注。'}
               </p>
-              <div className="flex gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onClick={handleRestart} className="px-8 py-4 bg-white/10 border border-white/20 text-white rounded-2xl font-bold hover:bg-white/20 transition active:scale-95">
                   重新挑战
                 </button>

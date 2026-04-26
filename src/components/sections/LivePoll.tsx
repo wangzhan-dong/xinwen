@@ -66,7 +66,7 @@ function SinglePoll({ poll }: { poll: PollQuestion }) {
   const totalVotes = options.reduce((s, o) => s + o.votes, 0);
 
   return (
-    <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8 backdrop-blur-xl">
+    <div className="bg-white/5 border border-white/10 rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-8 backdrop-blur-xl">
       <h3 className="text-lg md:text-xl font-bold text-white mb-6 leading-relaxed">
         {poll.question}
       </h3>
@@ -131,7 +131,7 @@ export default function LivePoll() {
   const [activePoll, setActivePoll] = useState(0);
 
   return (
-    <section id="poll" className="scroll-section py-24 bg-[#0a0a18] px-6 relative z-10">
+    <section id="poll" className="scroll-section py-12 sm:py-24 bg-[#0a0a18] px-4 sm:px-6 relative z-10">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <motion.span
@@ -144,7 +144,7 @@ export default function LivePoll() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-black mb-4 text-white"
+            className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 text-white"
           >
             你的<span className="text-rose-400">态度</span>是？
           </motion.h2>

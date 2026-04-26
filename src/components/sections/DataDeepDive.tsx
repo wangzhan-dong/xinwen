@@ -128,7 +128,7 @@ export default function DataDeepDive() {
   };
 
   return (
-    <section id="deepdive" className="scroll-section py-24 bg-[#05050A] text-white px-6">
+    <section id="deepdive" className="scroll-section py-12 sm:py-24 bg-[#05050A] text-white px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
           <motion.span 
@@ -141,9 +141,9 @@ export default function DataDeepDive() {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-black mb-8 leading-tight"
+            className="text-2xl sm:text-4xl md:text-6xl font-black mb-6 sm:mb-8 leading-tight"
           >
-            透视<span className="text-sky-500">万亿级</span>数字资产<br />
+            透视<span className="text-sky-500">万亿级</span>数字资产<br className="hidden sm:block" />
             背后的真相
           </motion.h2>
         </div>
@@ -176,7 +176,7 @@ export default function DataDeepDive() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] min-h-[400px]"
+            className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] min-h-[350px] sm:min-h-[400px]"
           >
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
               <span className="w-2 h-6 bg-sky-500 rounded-full"></span>
@@ -194,7 +194,7 @@ export default function DataDeepDive() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] min-h-[400px]"
+            className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] min-h-[350px] sm:min-h-[400px]"
           >
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
               <span className="w-2 h-6 bg-purple-500 rounded-full"></span>
@@ -212,14 +212,14 @@ export default function DataDeepDive() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="lg:col-span-2 bg-white/5 border border-white/10 p-8 rounded-[2.5rem] min-h-[450px]"
+            className="lg:col-span-2 bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] min-h-[380px] sm:min-h-[450px]"
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
               <h3 className="text-xl font-bold flex items-center gap-3">
                 <span className="w-2 h-6 bg-emerald-500 rounded-full"></span>
                 游戏虚拟物品交易细分市场构成 (2023)
               </h3>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-2 sm:gap-4">
                 <span className="text-[10px] bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full border border-sky-500/20"># 账号交易占比较小但客单价高</span>
                 <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20"># 道具装备为核心刚需</span>
               </div>

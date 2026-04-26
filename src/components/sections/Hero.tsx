@@ -8,9 +8,9 @@ export default function Hero() {
 
   return (
     <section id="hero" className="scroll-section relative h-screen w-full flex items-center justify-center overflow-hidden px-4 z-10 text-center">
-      <div className="content-box max-w-4xl mt-10">
+      <div className="content-box max-w-4xl mt-16 sm:mt-10">
         <motion.p 
-          className="text-sky-400 font-mono tracking-widest mb-4 uppercase text-sm border border-sky-400/30 inline-block px-4 py-1 rounded-full bg-sky-900/30"
+          className="text-sky-400 font-mono tracking-widest mb-3 sm:mb-4 uppercase text-[11px] sm:text-sm border border-sky-400/30 inline-block px-3 sm:px-4 py-1 rounded-full bg-sky-900/30"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -19,7 +19,7 @@ export default function Hero() {
         </motion.p>
         
         <motion.h1 
-          className="text-5xl md:text-8xl font-black text-white mb-6 leading-tight"
+          className="text-3xl sm:text-5xl md:text-8xl font-black text-white mb-4 sm:mb-6 leading-tight"
           initial={{ letterSpacing: "0.2em", opacity: 0 }}
           animate={{ letterSpacing: "0.02em", opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
@@ -31,7 +31,7 @@ export default function Hero() {
         </motion.h1>
         
         <motion.p 
-          className="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-slate-400 text-sm sm:text-lg md:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
@@ -46,12 +46,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a href="#paradigm" className="bg-sky-600 text-white px-10 py-5 rounded-2xl font-bold shadow-xl hover:bg-sky-500 transition-all transform hover:scale-105">
+          <a href="#paradigm" className="bg-sky-600 text-white px-6 sm:px-10 py-3.5 sm:py-5 rounded-2xl font-bold shadow-xl hover:bg-sky-500 transition-all transform hover:scale-105 text-sm sm:text-base">
             进入全景报告
           </a>
           <button 
             onClick={() => setIsPopupOpen(true)} 
-            className="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-2xl font-bold hover:bg-white/20 transition-all"
+            className="bg-white/10 text-white border border-white/20 px-6 sm:px-10 py-3.5 sm:py-5 rounded-2xl font-bold hover:bg-white/20 transition-all text-sm sm:text-base"
           >
             互动：你的资产值钱吗？
           </button>
@@ -65,13 +65,13 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[110] flex items-center justify-center bg-black/80 p-6 backdrop-blur-sm pointer-events-auto"
+            className="fixed inset-0 z-[110] flex items-center justify-center bg-black/80 p-4 sm:p-6 backdrop-blur-sm pointer-events-auto"
           >
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-[2.5rem] p-10 max-w-lg w-full text-center shadow-2xl"
+              className="bg-white rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-10 max-w-lg w-full text-center shadow-2xl"
             >
               <h3 className="text-2xl font-bold mb-4 italic text-slate-800">
                 “如果一款网游停止运营，你认为账号数据该不该退赔真金白银？”

@@ -47,19 +47,19 @@ export default function Legal() {
   };
 
   return (
-    <section id="legal" className="scroll-section py-24 bg-[#05050A] text-white px-6 overflow-hidden relative z-10 w-full">
+    <section id="legal" className="scroll-section py-12 sm:py-24 bg-[#05050A] text-white px-4 sm:px-6 overflow-hidden relative z-10 w-full">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="content-box">
             <motion.div 
               animate={controls}
               onClick={handleStrike}
-              className="text-8xl mb-8 opacity-80 select-none cursor-pointer hover:opacity-100 transition-opacity inline-block drop-shadow-[0_0_30px_rgba(239,68,68,0.3)] active:scale-90"
+              className="text-5xl sm:text-8xl mb-6 sm:mb-8 opacity-80 select-none cursor-pointer hover:opacity-100 transition-opacity inline-block drop-shadow-[0_0_30px_rgba(239,68,68,0.3)] active:scale-90"
               title="点击敲响法槌"
             >
               🔨
             </motion.div>
-            <h2 className="text-4xl font-black mb-6 leading-tight">2026：监管落地，告别野蛮生长</h2>
+            <h2 className="text-2xl sm:text-4xl font-black mb-4 sm:mb-6 leading-tight">2026：监管落地，告别野蛮生长</h2>
             
             <div className="space-y-6">
               <motion.div 
@@ -106,7 +106,7 @@ export default function Legal() {
           </div>
 
           <div className="content-box">
-            <div className="bg-white/5 p-10 rounded-[3rem] text-white shadow-2xl relative border-4 border-white/10 backdrop-blur-md">
+            <div className="bg-white/5 p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] text-white shadow-2xl relative border-4 border-white/10 backdrop-blur-md">
               <div className="absolute top-2 right-4 text-6xl opacity-10 font-serif">§</div>
               <h3 className="text-2xl font-bold mb-6 text-white text-center">司法趋势全景</h3>
               <div className="h-[280px]">

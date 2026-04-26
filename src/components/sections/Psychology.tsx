@@ -3,12 +3,12 @@
 
 export default function Psychology() {
   return (
-    <section id="psychology" className="scroll-section py-24 px-6 max-w-7xl mx-auto border-b border-white/10 z-10 relative">
+    <section id="psychology" className="scroll-section py-12 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-b border-white/10 z-10 relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div className="content-box">
           <div className="flex items-center space-x-3 mb-8">
             <div className="w-1.5 h-8 bg-sky-500 rounded-full"></div>
-            <h2 className="text-3xl font-black text-white">身份信号论与精神依赖</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-white">身份信号论与精神依赖</h2>
           </div>
           <p className="text-slate-300 mb-6 leading-relaxed">
             在多人在线网络中，稀有皮肤是一种高频率、低成本的身份展示方式。在某些数字化深度的亚洲市场，<strong className="text-white">45%</strong> 的用户认为屏幕内的视觉身份同等甚至高于物理形象。这也是奢侈品牌纷纷与网游跨界合作的理论根源。
@@ -24,7 +24,7 @@ export default function Psychology() {
         <div className="content-box mt-10 lg:mt-0">
           <div className="flex items-center space-x-3 mb-8">
             <div className="w-1.5 h-8 bg-red-500 rounded-full"></div>
-            <h2 className="text-3xl font-black text-white">系统脆弱性与监管风暴</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-white">系统脆弱性与监管风暴</h2>
           </div>
           <div className="space-y-4">
             <details className="bg-white/5 rounded-2xl border border-white/10 overflow-hidden group">

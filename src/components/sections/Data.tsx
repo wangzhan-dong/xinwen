@@ -42,11 +42,11 @@ export default function Data() {
   };
 
   return (
-    <section id="data" className="scroll-section py-24 bg-[#0a0a14] border-y border-white/10 px-6 overflow-hidden z-10 relative">
+    <section id="data" className="scroll-section py-12 sm:py-24 bg-[#0a0a14] border-y border-white/10 px-4 sm:px-6 overflow-hidden z-10 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 content-box">
-          <h2 className="text-4xl font-black mb-4 text-white">千亿级大盘的“蓄水池与动机”</h2>
-          <p className="text-slate-400">年轻人的行为不仅仅是纯粹的开支，这也是一种“以玩养玩”的资产存续。</p>
+        <div className="text-center mb-10 sm:mb-16 content-box">
+          <h2 className="text-2xl sm:text-4xl font-black mb-3 sm:mb-4 text-white">千亿级大盘的“蓄水池与动机”</h2>
+          <p className="text-slate-400 text-sm sm:text-base">年轻人的行为不仅仅是纯粹的开支，这也是一种“以玩养玩”的资产存续。</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -88,16 +88,16 @@ export default function Data() {
           </div>
 
           <div className="content-box">
-            <div className="dark-glass-card p-12 rounded-[4rem] shadow-xl border border-white/10 text-center relative overflow-hidden">
+            <div className="dark-glass-card p-6 sm:p-12 rounded-[2rem] sm:rounded-[4rem] shadow-xl border border-white/10 text-center relative overflow-hidden">
               <div className="absolute inset-0 bg-sky-900/20 z-0 pointer-events-none"></div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-8 text-white">{tankLabel}</h3>
+                <h3 className="text-lg sm:text-2xl font-bold mb-6 sm:mb-8 text-white">{tankLabel}</h3>
                 <div className="water-tank border border-white/20">
                   <div className="water-fill" style={{ height: `${tankHeight}%` }}>
                     <div className="water-wave"></div>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center text-white text-5xl font-black drop-shadow-lg">
-                    ¥ <span>{tankValue.toLocaleString()}</span> <span className="text-xl ml-1">/人均</span>
+                  <div className="absolute inset-0 flex items-center justify-center text-white text-3xl sm:text-5xl font-black drop-shadow-lg">
+                    ¥ <span>{tankValue.toLocaleString()}</span> <span className="text-base sm:text-xl ml-1">/人均</span>
                   </div>
                 </div>
                 <p className="text-slate-400 italic leading-relaxed text-sm mt-8">“{tankDesc}”</p>

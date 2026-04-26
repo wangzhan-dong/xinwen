@@ -3,11 +3,11 @@
 export default function Sources() {
   return (
     <>
-      <section id="sources" className="scroll-section py-20 px-6 bg-[#0a0a14] border-t border-white/10 z-10 relative">
+      <section id="sources" className="scroll-section py-12 sm:py-20 px-4 sm:px-6 bg-[#0a0a14] border-t border-white/10 z-10 relative">
         <div className="max-w-5xl mx-auto content-box">
           <div className="flex items-center space-x-4 mb-10">
             <div className="w-2 h-10 bg-slate-400 rounded-full"></div>
-            <h2 className="text-3xl font-bold text-white">严谨的数据与报告背书</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">严谨的数据与报告背书</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -45,7 +45,7 @@ export default function Sources() {
         </div>
       </section>
 
-      <footer className="bg-[#05050A] py-16 text-center text-slate-500 text-sm z-10 relative">
+      <footer className="bg-[#05050A] py-10 sm:py-16 text-center text-slate-500 text-sm z-10 relative px-4">
         <p className="tracking-widest uppercase mb-4 text-white/30 font-bold">全景视界 2026 融合新闻实验室</p>
         <p className="mt-4 text-xs opacity-70">成都大学25级文学与新闻传播学院广播电视学一班 融合新闻一组</p>
       </footer>

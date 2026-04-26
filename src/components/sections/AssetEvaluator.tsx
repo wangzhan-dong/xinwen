@@ -130,13 +130,13 @@ export default function AssetEvaluator() {
   ];
 
   return (
-    <section id="evaluator" className="scroll-section py-24 bg-[#0a0a14] px-6 relative z-10">
+    <section id="evaluator" className="scroll-section py-12 sm:py-24 bg-[#0a0a14] px-4 sm:px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500">
             赛博身价评估器
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
             基于市场中位数实时计算。输入你在游戏、社交、数字藏品等各领域的投入，全面量化你在这个时代的真实资产权重。
           </p>
         </div>
@@ -174,7 +174,7 @@ export default function AssetEvaluator() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-xl"
+                  className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] backdrop-blur-xl"
                 >
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                     <span className="p-2 bg-sky-500/20 rounded-full text-sky-400">🎮</span>
@@ -207,7 +207,7 @@ export default function AssetEvaluator() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-xl"
+                  className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] backdrop-blur-xl"
                 >
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                     <span className="p-2 bg-purple-500/20 rounded-full text-purple-400">📱</span>
@@ -240,7 +240,7 @@ export default function AssetEvaluator() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-xl"
+                  className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] backdrop-blur-xl"
                 >
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                     <span className="p-2 bg-emerald-500/20 rounded-full text-emerald-400">💎</span>
@@ -270,7 +270,7 @@ export default function AssetEvaluator() {
 
           {/* Results Sidebar */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-gradient-to-br from-sky-500/10 to-purple-500/10 border border-white/20 p-8 rounded-[3rem] backdrop-blur-2xl overflow-hidden group">
+            <div className="lg:sticky lg:top-24 bg-gradient-to-br from-sky-500/10 to-purple-500/10 border border-white/20 p-6 sm:p-8 rounded-[2rem] sm:rounded-[3rem] backdrop-blur-2xl overflow-hidden group">
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-sky-500/20 blur-[80px] group-hover:bg-sky-500/30 transition-all"></div>
               
               <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6 text-center">评估结果 / ESTIMATION</h3>
@@ -291,7 +291,7 @@ export default function AssetEvaluator() {
                     key={cyberWorth}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className={`text-5xl font-black mt-3 ${isCalculating ? 'opacity-30 blur-sm' : ''} transition-all`}
+                    className={`text-3xl sm:text-5xl font-black mt-3 ${isCalculating ? 'opacity-30 blur-sm' : ''} transition-all`}
                   >
                     ¥{cyberWorth.toLocaleString()}
                   </motion.div>
@@ -370,7 +370,7 @@ export default function AssetEvaluator() {
               transition={{ duration: 0.5 }}
               className="mt-16"
             >
-              <div className={`bg-gradient-to-br ${assetLevel.bg} border ${assetLevel.border} rounded-[3rem] p-10 md:p-14 backdrop-blur-2xl relative overflow-hidden`}>
+              <div className={`bg-gradient-to-br ${assetLevel.bg} border ${assetLevel.border} rounded-[1.5rem] sm:rounded-[3rem] p-6 sm:p-10 md:p-14 backdrop-blur-2xl relative overflow-hidden`}>
                 {/* Decorative */}
                 <div className="absolute top-0 right-0 text-[200px] font-black opacity-5 select-none leading-none">
                   {assetLevel.level}
@@ -382,7 +382,7 @@ export default function AssetEvaluator() {
                     <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2">
                       CYBER_ASSET_REPORT · {new Date().toLocaleDateString('zh-CN')}
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-black text-white">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
                       你的赛博资产报告
                     </h3>
                   </div>
@@ -392,21 +392,21 @@ export default function AssetEvaluator() {
                 </div>
 
                 {/* Main Stats */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-10">
                   <div className="bg-black/20 rounded-2xl p-6 text-center border border-white/10">
-                    <div className="text-3xl font-black text-white">¥{cyberWorth.toLocaleString()}</div>
+                    <div className="text-xl sm:text-3xl font-black text-white">¥{cyberWorth.toLocaleString()}</div>
                     <div className="text-xs text-slate-500 mt-1">资产总估值</div>
                   </div>
                   <div className="bg-black/20 rounded-2xl p-6 text-center border border-white/10">
-                    <div className="text-3xl font-black text-sky-400">¥{gameTotal.toLocaleString()}</div>
+                    <div className="text-xl sm:text-3xl font-black text-sky-400">¥{gameTotal.toLocaleString()}</div>
                     <div className="text-xs text-slate-500 mt-1">游戏资产</div>
                   </div>
                   <div className="bg-black/20 rounded-2xl p-6 text-center border border-white/10">
-                    <div className="text-3xl font-black text-purple-400">¥{socialTotal.toLocaleString()}</div>
+                    <div className="text-xl sm:text-3xl font-black text-purple-400">¥{socialTotal.toLocaleString()}</div>
                     <div className="text-xs text-slate-500 mt-1">社交流量</div>
                   </div>
                   <div className="bg-black/20 rounded-2xl p-6 text-center border border-white/10">
-                    <div className="text-3xl font-black text-emerald-400">¥{digitalTotal.toLocaleString()}</div>
+                    <div className="text-xl sm:text-3xl font-black text-emerald-400">¥{digitalTotal.toLocaleString()}</div>
                     <div className="text-xs text-slate-500 mt-1">数字资产</div>
                   </div>
                 </div>

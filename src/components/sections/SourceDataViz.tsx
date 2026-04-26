@@ -225,7 +225,7 @@ export default function SourceDataViz() {
   ];
 
   return (
-    <section id="sourcedata" className="scroll-section py-24 bg-[#06061a] text-white px-6 relative z-10">
+    <section id="sourcedata" className="scroll-section py-12 sm:py-24 bg-[#06061a] text-white px-4 sm:px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16">
@@ -244,7 +244,7 @@ export default function SourceDataViz() {
             六大<span className="text-amber-400">权威信源</span><br />
             数据实证
           </motion.h2>
-          <p className="text-slate-400 max-w-2xl">
+          <p className="text-slate-400 max-w-2xl text-sm sm:text-base">
             每一个论点背后都有数据支撑。以下图表直接来源于交易猫、中国信通院、裁判文书网、艾媒咨询等权威机构的公开数据。
           </p>
         </div>
@@ -274,12 +274,12 @@ export default function SourceDataViz() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
           {tabs.map(tab => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-6 py-3 rounded-2xl font-bold text-sm transition-all ${
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl font-bold text-xs sm:text-sm transition-all ${
                 activeTab === tab.key
                   ? 'bg-white/15 border-white/30 text-white shadow-lg'
                   : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10'
@@ -299,7 +299,7 @@ export default function SourceDataViz() {
         >
           {activeTab === 'market' && (
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
-              <div className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem]">
+              <div className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem]">
                 <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                   <span className="w-2 h-6 bg-sky-500 rounded-full"></span>
                   中国虚拟资产市场规模与合规化进程 (2020-2026)
@@ -327,7 +327,7 @@ export default function SourceDataViz() {
           )}
 
           {activeTab === 'judicial' && (
-            <div className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem]">
+            <div className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem]">
               <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                 <span className="w-2 h-6 bg-red-500 rounded-full"></span>
                 涉虚拟财产民事判例统计 (2018-2025)
@@ -370,7 +370,7 @@ export default function SourceDataViz() {
 
           {activeTab === 'user' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem]">
+              <div className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem]">
                 <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                   <span className="w-2 h-6 bg-purple-500 rounded-full"></span>
                   数字资产用户年龄分布
@@ -386,7 +386,7 @@ export default function SourceDataViz() {
                   <p className="text-xs text-slate-400">18-30岁用户合计占比<strong className="text-purple-400"> 63.8%</strong>，是虚拟资产持有的绝对主力。但50岁以上群体占比5.6%且增速最快。</p>
                 </div>
               </div>
-              <div className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem]">
+              <div className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem]">
                 <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                   <span className="w-2 h-6 bg-sky-500 rounded-full"></span>
                   虚拟资产持有类型分布
@@ -407,7 +407,7 @@ export default function SourceDataViz() {
           )}
 
           {activeTab === 'trade' && (
-            <div className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem]">
+            <div className="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem]">
               <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                 <span className="w-2 h-6 bg-amber-500 rounded-full"></span>
                 游戏高净值账号客单价与交易频次趋势 (2024-2026)

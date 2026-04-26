@@ -6,10 +6,10 @@ export default function Assets() {
   return (
     <section id="assets" className="scroll-section py-24 bg-[#0a0a14] text-white relative z-10 w-full overflow-hidden">
       <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNHYtNGwtMiAydi00bDItMnYtNGwyIDJWMjhsMi0ydi00bDItMlYxOGwyLTJ2LTRsMiAydi00aDRWMGgtNGwyLTJWMThsLTIgMnY0bC0yIDJ2NGwtMiAyeiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjAyIi8+PC9nPjwvc3ZnPg==')" }}></div>
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 content-box">
-          <h2 className="text-4xl font-black mb-4">全球核心游戏资产的数据图谱</h2>
-          <p className="text-slate-400">从皮肤到成品账号，不同受众将海量时间和金钱锚定在头部现象级数字经济体中。</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-10 sm:mb-16 content-box">
+          <h2 className="text-2xl sm:text-4xl font-black mb-3 sm:mb-4">全球核心游戏资产的数据图谱</h2>
+          <p className="text-slate-400 text-sm sm:text-base">从皮肤到成品账号，不同受众将海量时间和金钱锚定在头部现象级数字经济体中。</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -47,8 +47,10 @@ export default function Assets() {
           </motion.div>
         </div>
 
-        <div className="mt-12 overflow-x-auto content-box dark-glass-card rounded-2xl border border-slate-700 p-6 shadow-xl">
-          <h4 className="text-lg font-bold mb-4 text-slate-200">硬核数字标的溢价逻辑透视 (以 CS2 饰品为例)</h4>
+        <div className="mt-10 sm:mt-12 content-box dark-glass-card rounded-2xl border border-slate-700 p-4 sm:p-6 shadow-xl">
+          <h4 className="text-base sm:text-lg font-bold mb-4 text-slate-200">硬核数字标的溢价逻辑透视 (以 CS2 饰品为例)</h4>
+          <div className="text-xs text-slate-500 mb-2 sm:hidden">← 左右滑动查看更多 →</div>
+          <div className="overflow-x-auto -mx-2 px-2">
           <table className="w-full text-left border-collapse text-sm min-w-[600px]">
             <thead>
               <tr className="border-b border-slate-600 text-slate-400">
@@ -73,6 +75,7 @@ export default function Assets() {
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </section>
